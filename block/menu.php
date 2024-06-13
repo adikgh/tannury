@@ -90,7 +90,7 @@
 
 							<a class="menu_cn menu_cn2" href="tel:<?=$site['phone']?>">
 								<div class="menu_cim">
-									<div class="lazy_menu" data-src="/assets/img/bag/photo_2024-01-11_18-20-26.jpg"></div>
+									<div class="lazy_menu" data-src="/assets/img/bag/Frame 13.jpg"></div>
 									<!-- <span class="menu_cim_on"></span> -->
 								</div>
 								<div class="menu_cizt">
