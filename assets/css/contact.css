@@ -1,0 +1,83 @@
+/*  */
+.blc1_t{
+	width: 100%;
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.blc1_t a{
+	font-size: 24px;
+	font-weight: 600;
+}
+.blc1_t span{
+	font-size: 13px;
+	color: var(--cm);
+}
+
+/*  */
+.blc1_tn{
+	width: 100%;
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.callback-bt{
+	height: 164px;
+	width: 164px;
+	background: var(--cl);
+	box-shadow: var(--bx3);
+	border: 1px solid var(--cl);
+	border-radius: 50%;
+	transition: var(--tm);
+	cursor: pointer;
+	animation:hoverWave linear 1s infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.callback-bt:hover{background:var(--wh)}
+
+.callback-bt i{
+	color: var(--wh);
+	font-size: 60px;
+	line-height: 60px;
+	transition: var(--tm) ease-in-out;
+	animation: 1200ms ease 0s normal none 1 running shake;
+	animation-iteration-count: infinite;
+}
+.callback-bt:hover i{color:var(--cl)}
+
+
+
+/*  */
+.blc1_ts{
+	position: relative;
+	width: 100%;
+	margin-top: 60px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.blc1_ts > span{
+	font-size: 24px;
+	font-weight: 600;
+}
+.blc1_ts > p{
+	margin-top: 15px;
+}
+
+
+.blc1_ts .bl1_sos{
+	position: relative;
+	display: inline-flex;
+	bottom: auto;
+	margin-top: 15px;
+}
+.blc1_ts .bl1_si{color:var(--bl);font-size:24px}
+.blc1_ts .bl1_si:hover{color:var(--cl)}
