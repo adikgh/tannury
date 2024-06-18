@@ -18,7 +18,7 @@
    if (isset($_GET['lang'])) if ($_GET['lang'] == 'kz' || $_GET['lang'] == 'ru') $_SESSION['lang'] = $_GET['lang'];
    if (isset($_SESSION['lang'])) $lang = $_SESSION['lang'];
 
-   $ver = 1.313;
+   $ver = 1.3131;
    $site = mysqli_fetch_array(db::query("select * from `site` where id = 1"));
    $site_set = [
       'header' => true,
