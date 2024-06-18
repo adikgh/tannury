@@ -1,4 +1,4 @@
-<? // unset($_SESSION['loader']); ?>
+<? unset($_SESSION['loader']); ?>
 <? if (!isset($_SESSION['loader']) || !$_SESSION['loader']): ?>
 	<div class="preload">
 		<div class="preload-box">
