@@ -1,15 +1,19 @@
 	<!--  -->
 	<? // if ($site_set['clc_ph']): ?>
-		<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>?text=Я%20заинтересован%20по%20поводу%20санаторий%20...">
-			<div type="button" class="callback-btw">
-			<i class="fab fa-whatsapp"></i>
-			</div>
-		</a>
-		<a target="_blank" href="tel:<?=$site['phone']?>">
-			<div type="button" class="callback-bt">
-			<i class="far fa-phone"></i>
-			</div>
-		</a>
+		<div class="callback">
+			<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>?text=Я%20заинтересован%20по%20поводу%20санаторий%20...">
+				<div type="button" class="callback-btw">
+				<i class="fab fa-whatsapp"></i>
+				<span>Whatsapp</span>
+				</div>
+			</a>
+			<a target="_blank" href="tel:<?=$site['phone']?>">
+				<div type="button" class="callback-bt">
+				<i class="fal fa-phone"></i>
+				<span>Телефон</span>
+				</div>
+			</a>
+		</div>
 	<? // endif ?>
 
 	<!-- block form -->
@@ -24,6 +28,40 @@
 				<div class="form_im"><div class="btn orderSend"><span>Оставить заявку</span></div></div>
 			</div>
 			<div class="pop_bl_cl"><div class="btn btn_back zabr_back"><span>Закрыть</span><i class="far fa-times-circle"></i></div></div>
+		</div>
+	</div>
+
+	
+	<!-- block form -->
+	<div class="pop_bl lechy">
+		<div class="pop_bl_a lechy_back"></div>
+		<div class="pop_bl_c">
+			<div class="pop_imge">
+				<img class="lazy_img" data-src="/assets/uploads/photo_2024-06-04_07-33-31.jpg">
+			</div>
+			<div class="pop_bl_cl">
+				<div class="btn btn_back lechy_back">
+					<span>Закрыть</span>
+					<i class="far fa-times-circle"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- block form -->
+	<div class="pop_bl price_blc">
+		<div class="pop_bl_a price_back"></div>
+		<div class="pop_bl_c">
+			<div class="pop_imge">
+				<img class="lazy_img" data-src="/assets/uploads/price.jpg">
+			</div>
+			<div class="pop_bl_cl">
+				<div class="btn btn_back price_back">
+					<span>Закрыть</span>
+					<i class="far fa-times-circle"></i>
+				</div>
+			</div>
 		</div>
 	</div>
 

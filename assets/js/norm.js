@@ -345,7 +345,7 @@ $(document).ready(function() {
 
 
 
-   // 
+   	// 
 	$('.disb_zab').click(function(){$('.fr').addClass('pop_bl_act')})
 	$('.zabr_back').click(function(){$('.fr').removeClass('pop_bl_act')})
 
@@ -429,6 +429,25 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+	   	// 
+		$('.bl5_iclc div').click(function(){
+			$('.lechy').addClass('pop_bl_act')
+			$('.lazy_img').lazy({})
+		})
+		$('.lechy_back').click(function(){$('.lechy').removeClass('pop_bl_act')})
+
+
+	   	// 
+		$('.price_clc').click(function(){
+			$('.price_blc').addClass('pop_bl_act')
+			$('.lazy_img').lazy({})
+		})
+		$('.price_back').click(function(){$('.price_blc').removeClass('pop_bl_act')})
 
 
 

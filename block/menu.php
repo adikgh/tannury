@@ -8,8 +8,8 @@
 						<!-- <span><?=$site['name']?></span> -->
 					</a>
 					<div class="menu_wq">
-						<a class="menu_wqi" href="#">Территория</a>
-						<a class="menu_wqi" href="#">Отдых</a>
+						<a class="menu_wqi" href="#treatment">Лечение</a>
+						<a class="menu_wqi" href="#numbers">Номера</a>
 						<a class="menu_wqi" href="#about"><?=t::w('About')?></a>
 						<a class="menu_wqi" href="#review">Отзывы</a>
 						<a class="menu_wqi" href="#contact"><?=t::w('Contacts')?></a>
@@ -33,56 +33,45 @@
 							<div class="menu_cn">
 
 								<div class="menu_cnq">
-									<a class="menu_ci" href="/catalog/">
+									<a class="menu_ci" href="#treatment">
+										<div class="menu_cim"><i class="far fa-stethoscope"></i></div>
+										<span>Лечение</span>
+									</a>
+									<a class="menu_ci" href="#numbers">
 										<div class="menu_cim"><i class="far fa-h-square"></i></div>
-										<span><?=t::w('Sanatoriums')?></span>
+										<span>Номера</span>
+									</a>
+									<div class="menu_ci price_clc">
+										<div class="menu_cim"><i class="fas fa-tenge"></i></div>
+										<span>Прайс</span>
+									</div>
+									<a class="menu_ci" href="#reviews">
+										<div class="menu_cim"><i class="far fa-comment-dots"></i></div>
+										<span>Отзывы</span>
 									</a>
 									<div class="menu_ci menu_cip menu_cipc menu_clc_gprog">
 										<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/logo/logo.png"></div></div>
-										<span><?=t::w('About')?></span>
+										<span>О санаторий</span>
 									</div>
-									<!-- <div class="menu_ci menu_cip menu_cipc menu_clc_lang">
-										<? if ($lang == 'kz'): ?>
-											<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/icons/flag-kazakhstan_1f1f0-1f1ff.png"></div></div>
-											<span><?=t::w('Language')?>: <b>Қазақша</b></span>
-										<? else: ?>
-											<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/icons/flag-russia_1f1f7-1f1fa.png"></div></div>
-											<span><?=t::w('Language')?>: <b>Русский</b></span>
-										<? endif ?>
-									</div> -->
 								</div>
 
 								<div class="menu_cna dsp_n">
-									<div class="menu_pod menu_pod_lang dsp_n">
-										<div class="menu_ci menu_cipl">
-											<div class="menu_cim"><i class="fal fa-angle-left"></i></div>
-											<span>Назад</span>
-										</div>
-										<a class="menu_ci" href="<?=$url?>?lang=kz">
-											<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/icons/flag-kazakhstan_1f1f0-1f1ff.png"></div></div>
-											<span>Қазақша</span>
-										</a>
-										<a class="menu_ci" href="<?=$url?>?lang=ru">
-											<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/icons/flag-russia_1f1f7-1f1fa.png"></div></div>
-											<span>Русский</span>
-										</a>
-									</div>
 									<div class="menu_pod menu_pod_gprog dsp_n">
 										<div class="menu_ci menu_cipl">
 											<div class="menu_cim"><i class="fal fa-angle-left"></i></div>
 											<span>Назад</span>
 										</div>
-										<a class="menu_ci" href="#/about/">
+										<a class="menu_ci" href="#about">
 											<div class="menu_cim"></div>
 											<span>О нас</span>
 										</a>
-										<a class="menu_ci" href="/#review">
-											<div class="menu_cim"></div>
-											<span>Отзывы</span>
-										</a>
-										<a class="menu_ci" href="#/about/certificates.php">
+										<a class="menu_ci" href="#certificates">
 											<div class="menu_cim"></div>
 											<span>Сертификаты</span>
+										</a>
+										<a class="menu_ci" href="#contact">
+											<div class="menu_cim"></div>
+											<span>Контакты</span>
 										</a>
 									</div>
 								</div>

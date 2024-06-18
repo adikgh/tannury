@@ -54,7 +54,7 @@
 					<div class="blj2_ic">
 						<div class="blj2_img lazy_img" data-src="/assets/img/bag/close-up-doctor-holding-patient.jpg"></div>
 						<div class="blj2_in">
-							<div class="blj2_in2">20 видов лечения</div>
+							<div class="blj2_in2">более 20 видов лечения</div>
 						</div>
 					</div>
 				</div>
@@ -111,33 +111,41 @@
 					<div class="blj3_i">
 						<div class="blj3_it">01.</div>
 						<div class="blj3_ih">Удобное расположение</div>
-						<div class="blj3_ip">Село Анос - 60 минут от аэропорта в Горно-Алтайске</div>
+						<div class="blj3_ip">Санаторий - 60 минут от аэропорта Шымкент или 15 минут от вокзала Тюлькубас</div>
 					</div>
 					<div class="blj3_i">
 						<div class="blj3_it">02.</div>
-						<div class="blj3_ih">Уютные кедровые дома</div>
-						<div class="blj3_ip">Дома с кухней, теплым полом и местом для барбекю</div>
+						<div class="blj3_ih">Уютные свежый номера</div>
+						<div class="blj3_ip">У наших номеров все условия для проживания и лечения</div>
 					</div>
 					<div class="blj3_i">
 						<div class="blj3_it">03.</div>
 						<div class="blj3_ih">Невероятная природа</div>
-						<div class="blj3_ip">Чистый смешанный лес с его обитателями, водопады и реки среди гор</div>
+						<div class="blj3_ip">Вокруг горы вы будете полностью питаться с новой энергией</div>
 					</div>
 					<div class="blj3_i">
 						<div class="blj3_it">04.</div>
 						<div class="blj3_ih">Место для уединения</div>
-						<div class="blj3_ip">Загородные гостевые дома вдели оттрассы с хорошей звукоизоляцией</div>
+						<div class="blj3_ip">Загородные санаторий вдели от трассы с хорошей звукоизоляцией</div>
 					</div>
 					
 				</div>
+			</div>
+
+			<div class="blj3_r">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94158.10208707159!2d70.30119834158488!3d42.482182884759055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a89c26bc3bcecb%3A0x682d1672e1baba5f!2z0J7Qt9C00L7RgNC-0LLQuNGC0LXQu9GM0L3Ri9C5INC60L7QvNC_0LvQtdC60YEg0KLQsNC9INCd0YPRgNGL!5e0!3m2!1sru!2skz!4v1718671292043!5m2!1sru!2skz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
 	</div>
 
 
+	
+
+
+
 
 	<!--  -->
-	<div class="blj4" id="">
+	<!-- <div class="blj4" id="">
 		<div class="bl_c">
 			<div class="head_c">
 				<div class="head_v1 txt_c">
@@ -164,7 +172,7 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	
 	<!--  -->
@@ -193,6 +201,41 @@
 
 
 
+
+	<!-- block 5 -->
+	<div class="blx3">
+        <div class="bl_c">
+            <div class="head_c">
+                <h1 class="txt_tu txt_c">Виды лечения</h1>
+            </div>
+            <div class="blx3_c">
+                
+                <? $sql = db::query("select * from sanatorium_lesh where type = 1 and rek = 1 ORDER BY number ASC limit 5"); ?>
+                <? while ($ana = mysqli_fetch_array($sql)): ?>
+                    <div class="bl5_i " href="#em-vanna.php" >
+                        <div class="bl5_ia lazy_bag" data-src="/assets/uploads/em/<?=$ana['img']?>"></div>
+                        <div class="bl5_ic">
+                            <div class="bl5_ict"><?=$ana['name']?></div>
+                        </div>
+                    </div>
+                <? endwhile ?>
+
+                <div class="bl5_i bl5_iclc" >
+					<div class="btn">Показать все</div>
+				</div>
+			</div>
+
+            <!-- <div class="bl5_b ">
+                <p>У нас есть подходящие процедуры для каждого гостя</p>
+                <a href="lechenie.php"><div class="btn"><span>Посмотреть все процедуры </span><i class="far fa-long-arrow-right"></i></div></a>
+            </div> -->
+
+        </div>
+    </div>
+
+
+
+
 	<div class="sana_bl2">
 		<div class="bl_c">
 			<div class="head_c">
@@ -200,7 +243,7 @@
             </div>
             <div class="sana_bl2_c">
 
-                <? $sql = db::query("select * from sanatorium_number where arh is null ORDER BY id ASC"); ?>
+                <? $sql = db::query("select * from sanatorium_number where arh is null ORDER BY id ASC "); ?>
                 <? while ($ana = mysqli_fetch_array($sql)): ?>
                     <div class="bl5_i">
                         <div class="bl5_ic">
@@ -231,6 +274,7 @@
 						<div class="">ХОЛОДИЛЬНИК</div>
 					</div>
 					<div class="bl5_icbtn">
+						<div class="btn btn_bl2 price_clc">Прайс</div>
 						<div class="btn disb_zab">Забронировать</div>
 					</div>
 				</div>
@@ -324,6 +368,30 @@
 			
 		</div>
 	</div>
+
+
+
+
+
+
+	<!-- block 5 -->
+	<div class="blx3">
+        <div class="bl_c">
+            <div class="head_c">
+                <h1 class="txt_tu txt_c">Наши сертификаты</h1>
+            </div>
+          
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
 
 	<!--  -->
