@@ -137,6 +137,7 @@ $(document).ready(function() {
 	});
 	$('.header_r .menu_c').click(function(e) {
 		$('#html').removeClass('ovr_h');
+		$('.menu_o').removeClass('menu_o_act');
 	});
 
 
