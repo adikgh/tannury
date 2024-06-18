@@ -54,7 +54,7 @@
 					<div class="blj2_ic">
 						<div class="blj2_img lazy_img" data-src="/assets/img/bag/close-up-doctor-holding-patient.jpg"></div>
 						<div class="blj2_in">
-							<div class="blj2_in2">более 20 видов лечения</div>
+							<div class="blj2_in2">Более 20 видов лечения</div>
 						</div>
 					</div>
 				</div>
@@ -354,12 +354,12 @@
 				</div>
 				<div class="bl7_rzr">
 					<div class="bl7_rzrc" data-src="/assets/img/bag/close-up-doctor-holding-patient.jpg">
-                    	<div class="player_o7" data-plyr-provider="youtube" data-plyr-embed-id="nXsnu9kejgw"></div>
+                    	<div class="player_o7" data-plyr-provider="youtube" data-plyr-embed-id="nXsnu9kejgw" data-poster="/assets/img/bag/IMG_1444.webp"></div>
 						<script>
 							const player_o7 = new Plyr(".player_o7", {
 								fullscreen: {iosNative: true},
 								controls: ['play-large'],
-								poster: '/assets/img/bag/IMG_1444.webp',
+								// poster: '/assets/img/bag/IMG_1444.webp',
 							});
 						</script>
 					</div>
@@ -370,27 +370,19 @@
 	</div>
 
 
-
-
-
-
 	<!-- block 5 -->
 	<div class="blx3">
         <div class="bl_c">
             <div class="head_c">
-                <h1 class="txt_tu txt_c">Наши сертификаты</h1>
+                <h1 class="txt_tu txt_c">Наши сертификат</h1>
             </div>
-          
+			<div class="serct_dc">
+				<img src="" alt="" class="lazy_img" data-src="/assets/uploads/Report (1)_page-0001.jpg">
+				<!-- <img src="" alt="" class="lazy_img" data-src="/assets/uploads/Report (1)_page-0002.jpg"> -->
+				<!-- <img src="" alt="" class="lazy_img" data-src="/assets/uploads/Report (1)_page-0003.jpg"> -->
+			</div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 
 
 

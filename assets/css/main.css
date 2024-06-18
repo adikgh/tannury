@@ -1024,6 +1024,7 @@
 @media (max-width: 500px) {
 	.blj2_ic{
 		padding-bottom: 100%;
+		border-radius: 20px;
 	}
 }
 
@@ -1052,6 +1053,23 @@
 @media (max-width: 500px) {
 	.blj2_in{
 		bottom: 0 !important;
+		height: 100%;
+		width: 100%;
+	}
+	.blj2_in2{
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		text-align: center;
+		/* background: linear-gradient(90deg, var(--wh) 0%, var(-wh3) 40%, var(--trw) 100%); */
+		background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.3) 40%,  rgba(255,255,255,0) 100%);
+		height: 100%;
+		padding: 0 10px 40px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		font-size: 18px;
+		font-weight: 500;
 	}
 }
 
@@ -1064,7 +1082,11 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-
+@media (max-width: 500px) {
+	.blj2_img{
+		border-radius: 20px;
+	}
+}
 
 
 
@@ -2510,12 +2532,12 @@ div.bl5_iclc{
 	width: 100%;
 	transition: .3s;
 	color: var(--cm);
-	font-size: 38px;
+	font-size: 22px;
 	/* text-transform: uppercase; */
-	font-family: "Caveat", cursive;
-	font-optical-sizing: auto;
+	/* font-family: "Caveat", cursive; */
+	/* font-optical-sizing: auto; */
 	font-weight: 500;
-	font-style: normal;
+	/* font-style: normal; */
 }
 .bl5_ictp{
 	position: relative;
@@ -2541,7 +2563,7 @@ div.bl5_iclc{
 .bl5_icp{
 	width: 100%;
 	font-size: 24px;
-	font-weight: 600;
+	font-weight: 500;
 }
 @media(max-width:500px){
 	.bl5_ics{font-size:12px}
@@ -2576,12 +2598,12 @@ div.bl5_iclc{
 	width: 100%;
 	transition: .3s;
 	color: var(--cm);
-	font-size: 38px;
+	font-size: 22px;
 	/* text-transform: uppercase; */
-	font-family: "Caveat", cursive;
-	font-optical-sizing: auto;
+	/* font-family: "Caveat", cursive; */
+	/* font-optical-sizing: auto; */
 	font-weight: 500;
-	font-style: normal;
+	/* font-style: normal; */
 }
 .bl5_ix2{
 	position: relative;
@@ -3382,3 +3404,30 @@ div.bl5_iclc{
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.serct_dc{
+	position: relative;
+	width: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 5px 7px 10px 0px var(--gr2);
+}
+.serct_dc img{
+	width: 100%;
+}
