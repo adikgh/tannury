@@ -21,7 +21,7 @@
 			<div class="bl1_c">
 				<div class="bl1_offer">Откройте для себя <br> тишину и лечение</div>
 				<div class="bl1_offer2">Санаторий Таң-Нұры</div>
-				<div class="bl1_disc">Забронируйте свой <br> идеальное утро в горах</div>
+				<div class="bl1_disc">Забронируйте своё <br> идеальное утро в горах</div>
 				<div class="form_c">
 					<div class="form_im"><div class="btn disb_zab">Уединиться на природе</div></div>
 				</div>
