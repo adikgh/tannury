@@ -203,7 +203,7 @@
 
 
 	<!-- block 5 -->
-	<div class="blx3">
+	<div class="blx3" id="treatment">
         <div class="bl_c">
             <div class="head_c">
                 <h1 class="txt_tu txt_c">Виды лечения</h1>
@@ -236,7 +236,7 @@
 
 
 
-	<div class="sana_bl2">
+	<div class="sana_bl2" id="numbers">
 		<div class="bl_c">
 			<div class="head_c">
                 <h1 class="txt_tu txt_c">Наш уютные номера</h1>
@@ -287,7 +287,7 @@
 	
 	
 	<!--  -->
-	<div class="bl9">
+	<div class="bl9" id="review">
 		<div class="bl_c">
 			<div class="head_c">
                 <h1 class="txt_tu txt_c">Отзывы наших посетителей</h1>
@@ -324,7 +324,7 @@
 
 
 	<!--  -->
-	<div class="bl7" id="bl2">
+	<div class="bl7" id="about">
 		<div class="bl7_rzla"></div>
 		<div class="bl_c">
 			<div class="bl7_rz">
@@ -371,7 +371,7 @@
 
 
 	<!-- block 5 -->
-	<div class="blx3">
+	<div class="blx3" id="certificates">
         <div class="bl_c">
             <div class="head_c">
                 <h1 class="txt_tu txt_c">Наши сертификат</h1>

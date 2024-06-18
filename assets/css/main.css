@@ -992,7 +992,7 @@
 	.blj2_c{
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 		grid-gap: 20px;
-		/* margin-bottom: 80px; */
+		margin-bottom: 0;
 	}
 }
 
