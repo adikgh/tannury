@@ -115,7 +115,7 @@
 					</div>
 					<div class="blj3_i">
 						<div class="blj3_it">02.</div>
-						<div class="blj3_ih">Уютные свежый номера</div>
+						<div class="blj3_ih">Уютные свежые номера</div>
 						<div class="blj3_ip">У наших номеров все условия для проживания и лечения</div>
 					</div>
 					<div class="blj3_i">
@@ -176,12 +176,12 @@
 
 	
 	<!--  -->
-	<div class="blj5" id="bl2">
+	<!-- <div class="blj5" id="bl2">
 		<div class="bl_c">
 			<div class="blj5_rz">
-				<!-- <div class="blj5_rzr">
+				<div class="blj5_rzr">
 					<div class="blj5_rzrc lazy_img" data-src="/assets/img/bag/close-up-doctor-holding-patient.jpg"></div>
-				</div> -->
+				</div>
 				<div class="blj5_rzll">
 					<div class="head_c">
 						<div class="head_v1">
@@ -197,7 +197,7 @@
 				<div class="blj5_rzlr">* Начиная со вторых суток оплата за проживание согласно предоставленным тарифам</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 
