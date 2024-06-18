@@ -135,6 +135,9 @@ $(document).ready(function() {
 		$('#html').toggleClass('ovr_h');
 		$('.menu_o').toggleClass('menu_o_act');
 	});
+	$('.header_r .menu_c').click(function(e) {
+		$('#html').removeClass('ovr_h');
+	});
 
 
 	// 
