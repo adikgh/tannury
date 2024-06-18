@@ -1698,6 +1698,6 @@ ul, li{list-style:none}
 
 @media (max-width: 500px) {
 	.pop_imge{
-		padding-bottom: 120%;
+		padding-bottom: 100%;
 	}
 }
