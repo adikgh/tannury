@@ -1700,4 +1700,10 @@ ul, li{list-style:none}
 	.pop_imge{
 		padding-bottom: 100%;
 	}
+	.pop_imge img{
+		position: absolute;
+		width: 100%;
+		height: auto;
+		right: auto;
+	}
 }
