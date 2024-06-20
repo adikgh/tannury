@@ -45,17 +45,17 @@
 			</div>
 		</div>
 		<div class="utop">
-			<? if ($site_set['utop_bk']): ?>
+			<? if (@$site_set['utop_bk']): ?>
 				<div class="utop_l">
 					<a class="utop_ic" href="/admin/<?=$site_set['utop_bk']?>"><i class="fal fa-long-arrow-left"></i></a>
 				</div>
 			<? endif ?>
 			<div class="utop_r">
-				<? if ($site_set['utop']): ?>
+				<? if (@$site_set['utop']): ?>
 					<div class="utop_nm"><?=$site_set['utop']?></div>
 				<? else: ?>
 					<a class="utop_nm utop_nm2 logo" href="/admin/catalog/">
-						<div class="logo_l lazy_img" data-src="/assets/img/logo/logo_bl.png"></div>
+						<div class="logo_l lazy_img" data-src="/assets/img/logo/logo.png"></div>
 						<div class="logo_r"><?=$site['name']?></div>
 					</a>
 				<? endif ?>
@@ -80,7 +80,7 @@
 	<!-- Шапка -->
 	<? if (@$site_set['utop_bk']): ?>
 		<div class="utopc <?=(!$user_right?'uitemc_ud':'') ?>">
-			<a class="utopc_bk" href="/admin/<?=$site_set['utop_bk']?>">
+			<a class="utopc_bk" href="/admin/<?=@$site_set['utop_bk']?>">
 				<div class=""><i class="fal fa-long-arrow-left"></i></div>
 				<span>Артқа</span>
 			</a>
