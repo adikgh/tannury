@@ -339,4 +339,63 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+   
+	// cours add block
+	$('.company_edit_pop').click(function(){
+		$('.company_edit_block').addClass('pop_bl_act');
+		$('#html').addClass('ovr_h');
+	})
+	$('.company_edit_back').click(function(){
+		$('.company_edit_block').removeClass('pop_bl_act');
+		$('#html').removeClass('ovr_h');
+	})
+	$('.btn_company_edit').click(function () {
+		if ($('.company_name').val().length <= 2) mess('Атыңызды толтырыңыз')
+		else {
+			$.ajax({
+				url: "/admin/get.php?company_edit",
+				type: "POST",
+				dataType: "html",
+				data: ({
+					name: $('.company_name').attr('data-val'),
+					phone: $('.company_phone').attr('data-val'), 
+					phone_alt: $('.company_phone').val(),
+					whatsapp: $('.company_whatsapp').attr('data-val'), 
+					whatsapp_alt: $('.company_whatsapp').val(),
+					instagram: $('.company_instagram').attr('data-val'), 
+					telegram: $('.company_telegram').attr('data-val'), 
+					youtube: $('.company_youtube').attr('data-val'), 
+					metrika: $('.company_metrika').attr('data-val'), 
+					pixel: $('.company_pixel').attr('data-val'),
+				}),
+				success: function(data){
+					if (data == 'yes') {
+						mess('Cәтті сақталды!')
+						$('.company_edit_block').removeClass('pop_bl_act');
+						setTimeout(function() { location.reload(); }, 500);
+					} else console.log(data);
+				},
+				beforeSend: function(){ },
+				error: function(data){ console.log(data) }
+			})
+		}
+	})
+		
+
+
+
+
+
 })

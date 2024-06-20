@@ -4,7 +4,7 @@
 		<div class="header_c">
 			<div class="header_l">
 				<a class="logo" href="/admin/">
-					<div class="logo_l lazy_img" data-src="/assets/img/logo/icon_black.png"></div>
+					<div class="logo_l lazy_img" data-src="/assets/img/logo/logo.png"></div>
 					<div class="logo_r"><?=$site['name']?></div>
 				</a>
 			</div>

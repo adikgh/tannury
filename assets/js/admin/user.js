@@ -282,7 +282,7 @@ $(document).ready(function() {
 				data: formData,
 				success: function(msg){
 					if (msg.error == '') {
-						tfile_n = 'url(/assets/uploads/sanatorium/' + msg.file + ')'
+						tfile_n = 'url(/assets/uploads/number/' + msg.file + ')'
 						tfile.attr('data-val', msg.file)
 						tfile.siblings('.cours_img_add').addClass('form_im_img2')
 						tfile.siblings('.cours_img_add').css('background-image', tfile_n)
@@ -294,23 +294,24 @@ $(document).ready(function() {
 		}
 	});
 
-	// 
-	$('.price1_clc').click(function() { $('.price1_block').toggleClass('price1_block_act') });
-	$('.number1_clc').click(function() { $('.number1_block').toggleClass('number1_block_act') });
 
+
+
+
+	
 	// 
 	$('.btn_item_add').click(function () { 
-		if ($('.cours_name').attr('data-sel') != 1) mess('Форманы толтырыңыз')
+		if ($('.na_name').attr('data-sel') != 1) mess('Форманы толтырыңыз')
 		else {
 			$.ajax({
 				url: "/admin/item/get.php?item_add",
 				type: "POST",
 				dataType: "html",
 				data: ({
-					name: $('.cours_name').attr('data-val'),
-					adres: $('.cours_autor_ubd').data('val'),
-					sh_adres: $('.sh_adres').data('val'),
-					img: $('.sh_img').attr('data-val'),
+					na_name: $('.na_name').data('val'),
+					na_number_name: $('.na_number_name').data('val'), 
+					na_price: $('.na_price').data('val'),
+					na_img: $('.na_img').data('val'),
 				}),
 				success: function(data){
 					if (data == 'plus') location.reload();
@@ -322,26 +323,52 @@ $(document).ready(function() {
 		}
 	})
 	
+
+
+
+
+
+
+
+
+
 	// cours add block
 	$('.cours_edit_pop').click(function(){
 		$('.cours_edit_block').addClass('pop_bl_act');
 		$('#html').addClass('ovr_h');
+
+		id = $(this).attr('data-id')
+
+		$.ajax({
+			url: "/admin/item/get_view.php?view",
+			type: "POST",
+			dataType: "html",
+			data: ({ id: id, }),
+			beforeSend: function(){ },
+			error: function(data){ console.log(data) },
+			success: function(data){
+				if (data) $('.lesson_edit_99').html(data)
+				else console.log(data)
+			},
+		})
+
 	})
 	$('.cours_edit_back').click(function(){
 		$('.cours_edit_block').removeClass('pop_bl_act');
 		$('#html').removeClass('ovr_h');
 	})
-	$('.btn_cours_edit').click(function () { 
+	$('html').on('click', '.btn_cours_edit', function () {
+		console.log('fff');
 		$.ajax({
-			url: "/admin/item/get.php?item_edit",
+			url: "/admin/item/get.php?number_edit",
 			type: "POST",
 			dataType: "html",
 			data: ({
-				id: $('.btn_cours_edit').data('cours-id'),
-				name: $('.sh_name_ubd').data('val'),
-				adres: $('.cours_autor_ubd').data('val'), 
-				sh_adres: $('.sh_adres_ubd').data('val'),
-				img: $('.sh_img_ubd').data('val'),
+				id: $('.btn_cours_edit').data('id'),
+				nm_name: $('.nm_name').data('val'),
+				nm_number_name: $('.nm_number_name').data('val'), 
+				nm_price: $('.nm_price').data('val'),
+				nm_img: $('.nm_img').data('val'),
 			}),
 			success: function(data){
 				if (data == 'plus') location.reload();
@@ -353,40 +380,9 @@ $(document).ready(function() {
 	})
 
 
-	// 
-	$('.cours_copy').click(function () {
-		$.ajax({
-			url: "/admin/item/get.php?cours_copy",
-			type: "POST",
-			dataType: "html",
-			data: ({ id: $('.cours_copy').data('id'), }),
-			beforeSend: function(){ },
-			error: function(data){ console.log(data) },
-			success: function(data){
-				if (data == 'yes') location.url('/user/cours/');
-				else console.log(data)
-			},
-		})
-	})
-
 
 	// 
-	$('.cours_arh').click(function () {
-		$.ajax({
-			url: "/admin/item/get.php?cours_arh",
-			type: "POST",
-			dataType: "html",
-			data: ({ id: $('.cours_arh').data('id'), }),
-			success: function(data){
-				if (data == 'yes') location.reload();
-				else console.log(data)
-			},
-			beforeSend: function(){ },
-			error: function(data){ console.log(data) }
-		})
-	})
-	// 
-	$('.cours_del').click(function () {
+	$('html').on('click', '.cours_del', function () {
 		$.ajax({
 			url: "/admin/item/get.php?cours_del",
 			type: "POST",
@@ -408,104 +404,6 @@ $(document).ready(function() {
 
 
 
-
-
-	// add_lesson_b
-	$('.add_lesson_b').click(function(){
-		$('.lesson_add').addClass('pop_bl_act');
-		$('#html').addClass('ovr_h');
-	})
-	$('.lesson_add_back').click(function(){
-		$('.lesson_add').removeClass('pop_bl_act');
-		$('#html').removeClass('ovr_h');
-	})
-	$('.btn_lesson_add').on('click', function(){
-		$.ajax({
-			url: "/admin/item/get.php?lesson_add",
-			type: "POST",
-			dataType: "html",
-			data: ({
-				cours_id: $('.btn_lesson_add').data('cours-id'),
-				wb_type: $('.wb_type').attr('data-val'),
-				wb_number: $('.wb_number').attr('data-val'),
-				wb_price: $('.wb_price').attr('data-val'),
-				img: $('.wb_img').attr('data-val'),
-			}),
-			success: function(data){
-				if (data == 'yes') location.reload();
-				else console.log(data)
-			},
-			beforeSend: function(){},
-			error: function(data){console.log(data)}
-		})
-	})
-
-
-	// clc_lesson_b
-	$('.clc_lesson_b').click(function(){
-		$('.lesson_edit').addClass('pop_bl_act');
-		$('#html').addClass('ovr_h');
-
-		id = $(this).attr('data-id')
-		$('.lesson_clc_menu').attr('data-id', id)		
-		$('.lesson_clc_viewm').attr('href', 'lesson.php?id=' + id)
-
-		$.ajax({
-			url: "/admin/item/get_view.php?view",
-			type: "POST",
-			dataType: "html",
-			data: ({ id: id, }),
-			beforeSend: function(){ },
-			error: function(data){ console.log(data) },
-			success: function(data){
-				if (data) $('.lesson_edit_99').html(data)
-				else console.log(data)
-			},
-		})
-
-	})
-	$('.lesson_edit_back').click(function(){
-		$('.lesson_edit').removeClass('pop_bl_act');
-		$('#html').removeClass('ovr_h');
-	})
-	$('html').on('click', '.btn_lesson_edit', function(){
-		id = $(this).attr('data-id')
-		$.ajax({
-			url: "/admin/item/get.php?lesson_edit",
-			type: "POST",
-			dataType: "html",
-			data: ({
-				id: id,
-				wb_type: $('.wb_type_ubd').attr('data-val'),
-				wb_number: $('.wb_number_ubd').attr('data-val'),
-				wb_price: $('.wb_price_ubd').attr('data-val'),
-				img: $('.wb_img_ubd').attr('data-val'),
-			}),
-			beforeSend: function(){ },
-			error: function(data){ console.log(data) },
-			success: function(data){
-				if (data == 'yes') location.reload();
-				else console.log(data)
-			},
-		})
-	})
-
-	// del_lesson_b
-	$('html').on('click', '.del_lesson_b', function(){
-		id = $('.lesson_clc_menu').attr('data-id')
-		$.ajax({
-			url: "/admin/item/get.php?lesson_del",
-			type: "POST",
-			dataType: "html",
-			data: ({ id: id, }),
-			beforeSend: function(){ },
-			error: function(data){ console.log(data) },
-			success: function(data){
-				if (data == 'yes') location.reload();
-				else console.log(data)
-			},
-		})
-	})
 
 
 
@@ -532,7 +430,7 @@ $(document).ready(function() {
 				success: function(msg){
 					if (msg.error == '') {
 						$.each(msg.file, function(index, value){
-							tfile_n = 'url(/assets/uploads/sanatorium/'+value+')'
+							tfile_n = 'url(/assets/uploads/number/'+value+')'
 							tfile.parent().after('<div class="cours_lsi"><div class="cours_lsimg" data-id="" data-val="' + value + '"><div class="lazy_img" style="background-image:' + tfile_n + '"></div></div></div>')
 						})
 					} else mess(msg.error)

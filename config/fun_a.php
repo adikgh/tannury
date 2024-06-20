@@ -15,7 +15,7 @@
 		}
 
 		public static function sh_next_number() {
-			$sql = db::query("select * from sanatorium where number is not null order by number desc limit 1");
+			$sql = db::query("select * from sanatorium_number where number is not null order by number desc limit 1");
 			if (mysqli_num_rows($sql)) return (mysqli_fetch_array($sql))['number'] + 1; else return 1;
 		}
 
