@@ -99,20 +99,20 @@ $(document).ready(function() {
 
 
 	// 
-	$('html').on('click', '.sel_clc', function(){
+	$('.sel_clc').click(function() {
 		if ($(this).hasClass('form_sel_act') == false) {
 			$('.sel_clc').removeClass('form_sel_act')
 			$(this).addClass('form_sel_act')
 		} else $(this).removeClass('form_sel_act')
 	});
-	$('html').on('click', '.sel_clc_i .form_im_seli', function(){
+	$('.sel_clc_i .form_im_seli').click(function() {
 		$(this).parent().siblings('.sel_clc').attr('data-val', $(this).attr('data-val'))
 		$(this).parent().siblings('.sel_clc').html($(this).html())
 		$(this).parent().siblings('.sel_clc').removeClass('form_sel_act')
 	});
 
 	// 
-	$('html').on('click', '.form_im_toggle_btn', function(){
+	$('.form_im_toggle_btn').click(function() { 
 		if ($(this).hasClass('form_im_toggle_act') == true) $(this).siblings('input').attr('data-val', 0)
 		else $(this).siblings('input').attr('data-val', 1)
 		$(this).toggleClass('form_im_toggle_act')

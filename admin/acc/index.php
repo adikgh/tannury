@@ -1,7 +1,7 @@
-<? include "../../config/core_a.php";
+<?php include "../../config/core.php";
 
 	// Қолданушыны тексеру
-	if (!$user_id) header('location: /admin/');
+	if (!$user_id) header('location: /user/');
 
 	// Сайттың баптаулары
 	$menu_name = 'user';
@@ -9,10 +9,11 @@
 	$site_set['utop'] = 'Жеке деректер';
 	$site_set['utop_bk'] = '/cours';
 	$site_set['utopu'] = false;
-	$css = ['admin/user'];
-	$js = ['admin/user'];
+	$css = ['user', 'uacc'];
+	$js = ['user']; if ($user_right) $js = ['user', 'admin'];
 ?>
-<? include "../../block/header.php"; ?>
+<?php include "../../block/header.php"; ?>
+
 
 	<div class="up">
 
@@ -106,4 +107,4 @@
 		</div>
 	</div>
 
-<? include "../../block/footer.php"; ?>
+<?php include "../../block/footer.php"; ?>

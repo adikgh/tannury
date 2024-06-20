@@ -1,4 +1,11 @@
-<?php include "../config/core_a.php";
+<?php include "../config/core.php";
+
+
+	// 
+	if ($user_id) {
+		
+	} else { header('location: /u/sign_in.php'); }
+
 
 	// site setting
 	$menu_name = 'acc';

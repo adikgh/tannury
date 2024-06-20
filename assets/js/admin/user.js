@@ -339,7 +339,8 @@ $(document).ready(function() {
 			data: ({
 				id: $('.btn_cours_edit').data('cours-id'),
 				name: $('.sh_name_ubd').data('val'),
-				price: $('.sh_price_ubd').data('val'), 
+				adres: $('.cours_autor_ubd').data('val'), 
+				sh_adres: $('.sh_adres_ubd').data('val'),
 				img: $('.sh_img_ubd').data('val'),
 			}),
 			success: function(data){
@@ -594,11 +595,15 @@ $(document).ready(function() {
 				dataType: "html",
 				data: ({
 					name: $('.company_name').attr('data-val'),
-					phone: $('.company_phone').attr('data-val'), phone_alt: $('.company_phone').val(),
-					whatsapp: $('.company_whatsapp').attr('data-val'), whatsapp_alt: $('.company_whatsapp').val(),
-					instagram: $('.company_instagram').attr('data-val'), telegram: $('.company_telegram').attr('data-val'), youtube: $('.company_youtube').attr('data-val'), 
-					metrika: $('.company_metrika').attr('data-val'), pixel: $('.company_pixel').attr('data-val'),
-					tiktok_pixel: $('.company_tiktok_pixel').attr('data-val'),
+					phone: $('.company_phone').attr('data-val'), 
+					phone_alt: $('.company_phone').val(),
+					whatsapp: $('.company_whatsapp').attr('data-val'), 
+					whatsapp_alt: $('.company_whatsapp').val(),
+					instagram: $('.company_instagram').attr('data-val'), 
+					telegram: $('.company_telegram').attr('data-val'), 
+					youtube: $('.company_youtube').attr('data-val'), 
+					metrika: $('.company_metrika').attr('data-val'), 
+					pixel: $('.company_pixel').attr('data-val'),
 				}),
 				success: function(data){
 					if (data == 'yes') {

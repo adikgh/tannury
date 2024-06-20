@@ -1445,6 +1445,7 @@ input:focus + .form_icon, input:hover + .form_icon{color:var(--cl)}
 	background-repeat: no-repeat;
 }
 .logo_r{
+	margin-left: 10px;
 	font-size: 18px;
 	font-weight: 700;
 }

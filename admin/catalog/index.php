@@ -4,7 +4,7 @@
 	if (!$user_id) header('location: /admin/');
 
 	// Cours 
-	$cours = db::query("select * from sanatorium where number is not null ORDER BY number asc");
+	$cours = db::query("select * from sanatorium_number");
 
 	// Сайттың баптаулары
 	$menu_name = 'cours';
@@ -16,7 +16,7 @@
 	<div class="ucours">
 
 		<div class="head_c">
-			<h4>Шипажайлар</h4>
+			<h4>Бөлмелер</h4>
 		</div>
 
 		<div class="uc_d">
@@ -26,13 +26,20 @@
 			</div>
 
 			<? while($cours_d = mysqli_fetch_assoc($cours)): ?>
-				<a class="uc_di" href="/admin/item/?id=<?=$cours_d['id']?>">
-					<div class="bq_ci_img"><div class="lazy_img" data-src="/assets/uploads/sanatorium/<?=$cours_d['img']?>"></div></div>
-					<div class="bq_ci_info">
-						<div class="bq_cih"><?=$cours_d['name_'.$lang]?></div>
-						<p class="fr_price"><?=$cours_d['price']?></p>
-					</div>
-				</a>
+				<? $cours_id = $cours_d['id']; ?>
+					<a class="uc_di" data-id="<?=$cours_id?>" href="../item/?=$cours_id?>">
+						<div class="uc_dit">
+							<div class="bq_ci_info">
+								<div class="bq_cih"><?=$cours_d['type_name']?></div>
+							</div>
+							<div class="bq_ci_img">
+								<div class="lazy_img" data-src="/assets/uploads/number/<?=$cours_d['img']?>"></div>
+							</div>
+						</div>
+						<div class="uc_dib">
+							<div class="uc_dib_ckb fr_price"><?=$cours_d['price']?></div>
+						</div>
+					</a>
 			<? endwhile ?>
 		</div>
 
@@ -52,32 +59,25 @@
 				<div class="form_c">
 					
 					<div class="form_im">
-						<div class="form_span">Шипажайтың атауы:</div>
+						<div class="form_span">Бөлме түрінің атауы:</div>
 						<i class="fal fa-text form_icon"></i>
-                  <input type="text" class="form_txt cours_name" placeholder="Атауын жазыңыз" data-lenght="2" />
-               </div>
-					
-					<div class="form_im">
-						<div class="form_span">Адрес:</div>
-						<!-- <i class="fal fa-user-graduate form_icon"></i> -->
-						<input type="text" class="form_txt cours_autor" placeholder="Адрес жазыңыз" data-lenght="2" />
-					</div>
-
-					<div class="form_im form_sel">
-						<div class="form_span">Адрес таңдау:</div>
-						<i class="fal fa-warehouse-alt form_icon"></i>
-						<div class="form_im_txt sel_clc sh_adres" data-val="1">Қазақстан</div>
-						<i class="fal fa-caret-down form_icon_sel"></i>
-						<div class="form_im_sel sel_clc_i">
-							<? $warehouses = db::query("select * from country where parent_id is not null"); ?>
-							<? while ($warehouses_d = mysqli_fetch_assoc($warehouses)): ?>
-								<div class="form_im_seli" data-val="<?=$warehouses_d['id']?>"><?=$warehouses_d['name_kz']?></div>
-							<? endwhile ?>
-						</div>
+						<input type="text" class="form_txt cours_name" placeholder="Атауын жазыңыз" data-lenght="2" />
 					</div>
 
 					<div class="form_im">
-						<div class="form_span">Шипажай фотосы:</div>
+						<div class="form_span">Бағасы:</div>
+						<i class="fal fa-tenge form_icon"></i>
+						<input type="tel" class="form_im_txt fr_price wb_price" placeholder="10.000 тг" data-lenght="1" />
+					</div>
+
+					<div class="form_im">
+						<div class="form_span">Адам саны:</div>
+						<i class="fal fa-number form_icon"></i>
+						<input type="tel" class="form_im_txt fr_number " placeholder="2" data-lenght="1" />
+					</div>
+
+					<div class="form_im">
+						<div class="form_span">Бөлме фотосы:</div>
 						<input type="file" class="cours_img sh_img file dsp_n" accept=".png, .jpeg, .jpg">
 						<div class="form_im_img lazy_img cours_img_add" data-txt="Фотоны жаңарту">Құрылғыдан таңдау</div>
 					</div>

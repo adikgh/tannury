@@ -279,12 +279,6 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-gap: 15px;
 }
-@media (max-width: 500px) {
-	.cours_ls{
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 15px;
-	}
-}
 
 .cours_ls .cours_lsi{
 	position: relative;

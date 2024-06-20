@@ -2,7 +2,7 @@
 
 	// 
 	if(isset($_GET['add_item_photo'])) {
-		$path = '../../assets/uploads/sanatorium/';
+		$path = '../../assets/uploads/number/';
 		$allow = array();
 		$deny = array(
 			'phtml', 'php', 'php3', 'php4', 'php5', 'php6', 'php7', 'phps', 'cgi', 'pl', 'asp', 
@@ -73,12 +73,14 @@
 	// 
 	if(isset($_GET['item_edit'])) {
 		$id = strip_tags($_POST['id']);
-		$name = @strip_tags($_POST['name']);
-		$price = @strip_tags($_POST['price']);
-		$img = @strip_tags($_POST['img']);
+		$name = strip_tags($_POST['name']);
+		$adres = strip_tags($_POST['adres']);
+		$sh_adres = strip_tags($_POST['sh_adres']);
+		$img = strip_tags($_POST['img']);
 
 		if ($name) $upd = db::query("UPDATE `sanatorium` SET `name_kz`='$name', `name_ru`='$name' WHERE `id`='$id'");
-		if ($price) $upd = db::query("UPDATE `sanatorium` SET `price`='$price' WHERE `id`='$id'");
+		if ($adres) $upd = db::query("UPDATE `sanatorium` SET `address`='$adres' WHERE `id`='$id'");
+		if ($sh_adres) $upd = db::query("UPDATE `sanatorium` SET `country_id`='$sh_adres' WHERE `id`='$id'");
 		if ($img) $upd = db::query("UPDATE `sanatorium` SET `img`='$img' WHERE `id`='$id'");
 
 		echo 'plus';

@@ -36,7 +36,7 @@
             <div class="form_im">
                <div class="form_span">Бағасы:</div>
                <i class="fal fa-tenge form_icon"></i>
-               <input type="tel" class="form_im_txt fr_price wb_price_ubd" placeholder="10.000 тг" data-lenght="1" data-val="<?=$lesson_d['price']?>" value="<?=$lesson_d['price']?>" />
+               <input type="tel" class="form_im_txt fr_price wb_price_ubd" placeholder="10.000 тг" data-lenght="1" data-val="<?=$lesson_d['price']?>" />
             </div>
 
             <div class="form_im">
