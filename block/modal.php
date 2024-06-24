@@ -37,7 +37,7 @@
 		<div class="pop_bl_a lechy_back"></div>
 		<div class="pop_bl_c">
 			<div class="pop_imge">
-				<img class="lazy_img" data-src="/assets/uploads/photo_2024-06-04_07-33-31.jpg">
+				<img class="lazy_img" data-src="/assets/uploads/мед_услуги_2[1]_page-0001.jpg">
 			</div>
 			<div class="pop_bl_cl">
 				<div class="btn btn_back lechy_back">
